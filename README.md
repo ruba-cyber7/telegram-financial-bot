@@ -10,3 +10,43 @@ An asynchronous, enterprise-grade Telegram financial ecosystem engineered with P
 
 ## 🛠️ Tech Stack
 - Python, Asyncio, Aiogram 3.x, SQLite, aiosqlite, python-dotenv.
+---
+
+## 🤖 bot.py — Application Core
+
+`bot.py` serves as the primary orchestration layer of the application. It connects the Telegram interface with the database, trading router, flash router, payment and withdrawal workflows, FSM state management, and administrative processes.
+
+### Core Responsibilities
+
+* Application and bot initialization.
+* Modular router integration.
+* FSM-based multi-step workflows.
+* Deposit and withdrawal management.
+* Administrative workflow.
+* External payment request handling.
+* Balance and transaction coordination.
+* Logging and application lifecycle management.
+
+### Technology
+
+**Python · asyncio · Aiogram 3.x · FSM · python-dotenv · aiosqlite**
+
+---
+
+## 🗄️ database.py — Database Layer
+
+`database.py` provides the asynchronous SQLite data layer using `aiosqlite`. It manages users, balances, transactions, trading history, deposits, withdrawals, and flash-balance operations.
+
+### Core Responsibilities
+
+* Asynchronous SQLite connection management.
+* User and balance management.
+* Deposit and withdrawal operations.
+* Trading and transaction data storage.
+* Flash-balance management with expiration handling.
+* Input validation and transactional database operations.
+* SQLite WAL mode and foreign-key enforcement.
+
+### Technology
+
+**SQLite · aiosqlite · asyncio · datetime · calendar**
