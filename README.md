@@ -50,13 +50,14 @@ An asynchronous, enterprise-grade Telegram financial ecosystem engineered with P
 ### Technology
 
 **SQLite · aiosqlite · asyncio · datetime · calendar**
-flashrouter.py – موجه رصيد الفلاش
-​تعد هذه الطبقة بمثابة الموجه الديناميكي المتخصص لإدارة نظام رصيد الفلاش المؤقت (عالي السيولة) في البوت. فهي تتعامل مع تفاعلات الأزرار الشفافة، وتتيح للمستخدمين استعراض أرصدتهم المتاحة بأمان، وتنفيذ عمليات التحويل، وشحن المواقع، وإدارة جلسات التداول وسحب السيولة.
-​المسؤوليات الأساسية
-​استقبال وتنفيذ أوامر رصيد الفلاش المؤقت.
-​عرض القوائم التفاعلية والأزرار اللحظية (Inline Keyboards).  
-​جلب ومعالجة أرصدة المستخدمين بشكل آمن وتجنب أخطاء التشغيل.  
-​إدارة مسارات العمليات المالية مثل: التحويل للمحافظ، الشحن، والتداول.  
-​توجيه طلبات السحب والمعاملات السريعة بكفاءة عالية.
-​تكنولوجيا
-​Aiogram 3.x (Router & Callbacks) • Asyncio • F (Filters) • Python 
+
+⚡ flashrouter.py – Flash Balance Router
+​This layer acts as the specialized dynamic router for managing the temporary high-liquidity flash balance system in the bot. It handles transparent inline button interactions, allows users to securely view their available balances, and executes operations such as wallet transfers, website top-ups, trading session management, and liquidity withdrawals.
+​Core Responsibilities
+​Receiving and executing temporary flash balance commands.
+​Displaying interactive menus and dynamic inline keyboards.  
+​Safely fetching and processing user balances while preventing runtime errors.  
+​Managing financial operation workflows such as wallet transfers, top-ups, and trading.  
+​Efficiently routing withdrawal requests and rapid transaction processes.
+​Technology
+​Aiogram 3.x (Router & Callbacks) • Asyncio • F (Filters) • Python
