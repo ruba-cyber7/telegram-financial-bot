@@ -1,0 +1,143 @@
+@keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes toastIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 360px) {
+            body {
+                padding-inline: 10px;
+            }
+            .package-card {
+                padding: 18px 15px;
+            }
+            .header p,
+            .package-desc {
+                font-size: 13px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="brand-icon" aria-hidden="true">🥇</div>
+            <h1>USDT | فلاش</h1>
+            <p>نظام التمويل والترويج الرقمي الاحترافي</p>
+        </header>
+
+        <section class="packages" aria-label="الباقات المتاحة">
+            <article class="package-card">
+                <div class="package-label">الباقة الأكثر طلبًا</div>
+
+                <h2 class="package-title">الباقة 1</h2>
+
+                <div class="package-price">
+                    <span class="currency">USDT</span> 100
+                </div>
+
+                <p class="package-desc">
+                    تحصل على <strong>FLASH 7500</strong>
+                </p>
+
+                <div class="networks-box">
+                    <div class="networks-title">الشبكات المدعومة</div>
+
+                    <div class="network-tags" aria-label="الشبكات المدعومة">
+                        <span class="tag">ERC20</span>
+                        <span class="tag tag-yellow">BEP20</span>
+                        <span class="tag">TRC20</span>
+                    </div>
+                </div>
+
+                <div class="expiry-badge">
+                    ⏳ تنتهي هذه الباقة بعد 155 يومًا
+                </div>
+
+                <button
+                    class="buy-btn"
+                    type="button"
+                    aria-label="شراء باقة USDT بقيمة 100"
+                >
+                    شراء الآن
+                </button>
+            </article>
+        </section>
+
+        <p class="footer-note">
+            تأكد من الشبكة والعنوان قبل إرسال أي تحويل.
+            <br>
+            لا ترسل الأموال إلا إلى جهة موثوقة ومعروفة.
+        </p>
+    </main>
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <script>
+        const toast = document.getElementById("toast");
+
+        // استخدام querySelectorAll لضمان العمل بسلاسة حتى لو زادت الباقات مستقبلاً بدون تكرار الأخطاء
+        document.querySelectorAll(".buy-btn").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const button = e.currentTarget;
+                
+                // تفعيل حالة التحميل (Loading)
+                button.disabled = true;
+                button.textContent = "جاري التحويل...";
+
+                toast.textContent = "سيتم تحويلك إلى صفحة إتمام الطلب.";
+                toast.classList.add("show");
+
+                 setTimeout(() => {
+                    toast.classList.remove("show");
+                    button.disabled = false;
+                    button.textContent = "شراء الآن";
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
