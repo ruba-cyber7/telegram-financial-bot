@@ -75,3 +75,17 @@ This script serves as an automated test utility for verifying core functionaliti
 #### Technology
 * Asyncio • SQLite / Aiosqlite • Python
 
+
+### 📈 trading.py – Trading & Market Simulation Engine
+
+This module handles the complete trading lifecycle within the Telegram bot, supporting both Binary Options and Forex markets. It implements a multi-step Finite State Machine (FSM) workflow to guide users through market selection, currency/crypto pair choice, amount entry with precise decimal validation, direction selection (Call/Put or Buy/Sell), and simulated trade execution with automatic balance updates and transaction history logging.
+
+#### Core Responsibilities
+* Managing the FSM states for market, pair, amount, and direction selection[span_2](start_span)[span_2](end_span).
+* Handling binary options and forex market workflows with dynamic interactive keyboards[span_3](start_span)[span_3](end_span).
+* Validating input amounts against liquidity and maximum trade limits using the Decimal library[span_4](start_span)[span_4](end_span).
+* Executing secure database transactions with row-level locking (`BEGIN IMMEDIATE`) and balance verification[span_5](start_span)[span_5](end_span).
+* Simulating trade outcomes (win/loss), calculating profits, updating user balances atomically, and recording results in the trade history[span_6](start_span)[span_6](end_span).
+
+#### Technology
+* Aiogram 3.x (Router, FSM Context, StatesGroup, Callbacks) • Decimal • Asyncio • SQLite / Aiosqlite • Random[span_7](start_span)[span_7](end_span)
