@@ -61,3 +61,17 @@ An asynchronous, enterprise-grade Telegram financial ecosystem engineered with P
 ​Efficiently routing withdrawal requests and rapid transaction processes.
 ​Technology
 ​Aiogram 3.x (Router & Callbacks) • Asyncio • F (Filters) • Python
+
+### 🧪 test.py – Testing & Verification Script
+
+This script serves as an automated test utility for verifying core functionalities and database integrations. It initializes the database schema asynchronously and performs test operations (such as simulating a user deposit) to ensure the system logic executes smoothly without runtime exceptions.
+
+#### Core Responsibilities
+* Initializing the SQLite database asynchronously for testing[span_3](start_span)[span_3](end_span).
+* Executing automated test cases (e.g., simulating deposits) against database functions[span_4](start_span)[span_4](end_span).
+* Catching and reporting runtime exceptions or integration errors[span_5](start_span)[span_5](end_span).
+* Validating backend readiness before full deployment.
+
+#### Technology
+* Asyncio • SQLite / Aiosqlite • Python
+
