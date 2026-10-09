@@ -89,3 +89,17 @@ This module handles the complete trading lifecycle within the Telegram bot, supp
 
 #### Technology
 * Aiogram 3.x (Router, FSM Context, StatesGroup, Callbacks) • Decimal • Asyncio • SQLite / Aiosqlite • Random[span_7](start_span)[span_7](end_span)
+
+
+### 🌐 index.html – Web Frontend & User Interface
+
+This file represents the frontend web interface component of the ecosystem, designed with modern CSS styles (featuring animations and responsive media queries) and interactive JavaScript. It provides a clean dashboard layout presenting digital funding packages, supported blockchain networks (such as ERC20, BEP20, and TRC20), expiry details, and interactive purchase buttons with loading states and notification toasts.
+
+#### Core Responsibilities
+* Delivering a responsive user interface with CSS animations and mobile-friendly media queries[span_2](start_span)[span_2](end_span).
+* Displaying professional digital funding packages, pricing, and expiration details[span_3](start_span)[span_3](end_span).
+* Highlighting supported cryptocurrency networks (ERC20, BEP20, TRC20)[span_4](start_span)[span_4](end_span).
+* Handling interactive purchase triggers, loading states, and dynamic status notification toasts using Vanilla JavaScript[span_5](start_span)[span_5](end_span).
+
+#### Technology
+* HTML5 • CSS3 (Animations & Media Queries) • JavaScript (DOM Manipulation & Event Listeners)[span_6](start_span)[span_6](end_span)
