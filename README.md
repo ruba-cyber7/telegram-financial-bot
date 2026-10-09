@@ -51,13 +51,13 @@ An asynchronous, enterprise-grade Telegram financial ecosystem engineered with P
 
 **SQLite · aiosqlite · asyncio · datetime · calendar**
 
-⚡ flashrouter.py – Flash Balance Router
+​⚡ flashrouter.py – Flash Balance Router
 ​This layer acts as the specialized dynamic router for managing the temporary high-liquidity flash balance system in the bot. It handles transparent inline button interactions, allows users to securely view their available balances, and executes operations such as wallet transfers, website top-ups, trading session management, and liquidity withdrawals.
 ​Core Responsibilities
 ​Receiving and executing temporary flash balance commands.
-​Displaying interactive menus and dynamic inline keyboards.  
-​Safely fetching and processing user balances while preventing runtime errors.  
-​Managing financial operation workflows such as wallet transfers, top-ups, and trading.  
+​Displaying interactive menus and dynamic inline keyboards.
+​Safely fetching and processing user balances while preventing runtime errors.
+​Managing financial operation workflows such as wallet transfers, top-ups, and trading.
 ​Efficiently routing withdrawal requests and rapid transaction processes.
 ​Technology
 ​Aiogram 3.x (Router & Callbacks) • Asyncio • F (Filters) • Python
